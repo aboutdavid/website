@@ -1,0 +1,46 @@
+---
+layout: base.njk
+---
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>hey, i'm david</h1>
+  <h3>about</h3>
+  <p>I'm just your average JAMstack developer who normally uses 11ty.</p>
+  <p>I'm in the <a href="https://512kb.club/">512kb club (green team)</a></p>
+ <h3>contact</h3>
+  <ul>
+    <li>GitHub: aboutDavid</li>
+    <li>Twitter: @UpscaleDavid</li>
+    <li>Freenode: aboutDavid</li>
+    <li>Keybase: aboutdavid</li>
+    <li>Email: aboutdavid at protonmail dot com</li>
+    <li>PGP: <a href="https://git.io/JqThW">91E6 BCC6 5D21 E893</a></li>
+  </ul>
+  <h3>projects</h3>
+  <div class="grid-container">
+    {% for project in projects %}
+     <div class="grid-item">
+     <a href="{{ project.url }}">{{ project.name }}</a><br />{{ project.description }}
+   </div>
+   {% endfor %}
+
+  </div>
+<h3>blog</h3>
+<div class="grid-container">
+  {% for post in posts %}
+
+   <div class="grid-item">
+   <a href="/post/{{ post.slug }}">{{ post.title }}</a><br />Written on {{
+   post.date }} &bull; {{ post.readTime }}
+ </div>
+
+ {% endfor %}
+
+</div>
+
+</body>
+</html>

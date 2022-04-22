@@ -1,0 +1,35 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@notionhq/client": "^1.0.4",
+    "adm-zip": "^0.5.9",
+    "cheerio": "^1.0.0-rc.10",
+    "clean-css": "^5.1.1",
+    "dotenv": "^10.0.0",
+    "download": "^8.0.0",
+    "extract-zip": "^2.0.1",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-meta": "0.0.1",
+    "moment": "^2.29.1",
+    "notion-exporter": "^0.3.0",
+    "randomstring": "^1.2.1",
+    "reading-time": "^1.3.0",
+    "request": "^2.88.2",
+    "slugify": "^1.4.7",
+    "sync-request": "^6.1.0"
+  }
+}
