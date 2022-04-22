@@ -10,7 +10,7 @@ layout: base.njk
   <h1>hey, i'm david</h1>
   <h3>about</h3>
   <p>I'm just your average JAMstack developer who normally uses 11ty.</p>
-  <!--<p>I'm in the <a href="https://512kb.club/">512kb club (green team)</a></p>-->
+  
  <h3>contact</h3>
   <ul>
     <li>GitHub: aboutDavid</li>
@@ -20,6 +20,8 @@ layout: base.njk
     <li>Email: aboutdavid at protonmail dot com</li>
     <li>PGP: <a href="https://git.io/JqThW">91E6 BCC6 5D21 E893</a></li>
   </ul>
+  <h3>what i'm listening to</h3>
+  <p id="song"><noscript>can't do any<noscript> loading <noscript>when javascript is turned off...<noscript></p>
   <h3>projects</h3>
   <div class="grid-container">
     {% for project in projects %}
@@ -41,6 +43,16 @@ layout: base.njk
  {% endfor %}
 
 </div>
-
+<footer>
+  <script>
+    fetch("https://davidmusic.glitch.me/").then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      document.getElementById("song").innerHTML = json.song;
+    }).catch(function(err) {
+      document.getElementById("song").innerHTML = "Couldn't load the song...";
+    });
+  </script>
+</footer>
 </body>
 </html>
