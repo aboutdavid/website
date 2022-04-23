@@ -26,7 +26,7 @@ layout: base.njk
   <div class="grid-container">
     {% for project in projects %}
      <div class="grid-item">
-     <a href="{{ project.url }}">{{ project.name }}</a><br />{{ project.description }}
+     <a href="{{ project.url }}" onclick="clickedOnProject()">{{ project.name }}</a><br />{{ project.description }}
    </div>
    {% endfor %}
 
@@ -36,7 +36,7 @@ layout: base.njk
   {% for post in posts %}
 
    <div class="grid-item">
-   <a href="/post/{{ post.slug }}">{{ post.title }}</a><br />Written on {{
+   <a href="/post/{{ post.slug }}" onclick="clickedOnPost()">{{ post.title }}</a><br />Written on {{
    post.date }} &bull; {{ post.readTime }}
  </div>
 
