@@ -37,7 +37,6 @@ code {
   }
 }
 .grid-item {
-
   padding: 20px;
   text-align: center;
 }
@@ -47,20 +46,16 @@ code {
   grid-template-columns: auto auto auto;
 }
 /* laptops */
-@media screen
-  and (min-device-width: 1200px)  {
-
+@media screen and (min-device-width: 1200px) {
   .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  /* phones */
 }
-/* phones */
-}
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .grid-container {
-  display: grid;
-  grid-template-columns: auto;
-}
+    display: grid;
+    grid-template-columns: auto;
+  }
 }
