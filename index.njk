@@ -58,11 +58,11 @@ layout: base.njk
     .then(response => response.json())
     .then(res=>{
         var i = 0
-        var text = `<ul><li><a href="/">English</span></li>`
+        var text = `<ul><li><a href="/">English</a></span></li>`
         var languages = res.languages
         while(i<languages.length){
             console.log(languages)
-            text+= `<li onclick="switchLanguage(&quot;${languages[i].filename}&quot;)">${languages[i].native}</li>`
+            text+= `<li onclick="switchLanguage(&quot;${languages[i].filename}&quot;)"><a href="#">${languages[i].native}</a></li>`
             i++
         }
         document.querySelector("#languages").innerHTML=text + "</ul>"
