@@ -7,11 +7,11 @@ layout: base.njk
 
 </head>
 <body>
-  <h1>hey, i'm david</h1>
-  <h3>about</h3>
-  <p>I'm just your average JAMstack developer who normally uses 11ty.</p>
+  <h1 id="hello">hey, i'm david</h1>
+  <h3 id="about">about</h3>
+  <p id="whatiam">I'm just your average JAMstack developer who normally uses 11ty.</p>
   
- <h3>contact</h3>
+ <h3 id="contact">contact</h3>
   <ul>
     <li>GitHub: aboutDavid</li>
     <li>Twitter: @UpscaleDavid</li>
@@ -20,9 +20,9 @@ layout: base.njk
     <li>Email: aboutdavid at protonmail dot com</li>
     <li>PGP: <a href="https://git.io/JqThW">91E6 BCC6 5D21 E893</a></li>
   </ul>
-  <h3>what i'm listening to</h3>
+  <h3 id="whatimlisteningto">what i'm listening to</h3>
   <p id="song"><noscript>can't do any<noscript> loading <noscript>when javascript is turned off...<noscript></p>
-  <h3>projects</h3>
+  <h3 id="projects">projects</h3>
   <div class="grid-container">
     {% for project in projects %}
      <div class="grid-item">
@@ -31,12 +31,12 @@ layout: base.njk
    {% endfor %}
 
   </div>
-<h3>blog</h3>
+<h3 id="blog">blog</h3>
 <div class="grid-container">
   {% for post in posts %}
 
    <div class="grid-item">
-   <a href="/post/{{ post.slug }}" onclick="clickedOnPost()">{{ post.title }}</a><br />Written on {{
+   <a href="/post/{{ post.slug }}" onclick="clickedOnPost()">{{ post.title }}</a><br /><span id="blogdate">Written on</span> {{
    post.date }} &bull; {{ post.readTime }}
  </div>
 
@@ -50,7 +50,7 @@ layout: base.njk
     }).then(function(json) {
       document.getElementById("song").innerHTML = json.song;
     }).catch(function(err) {
-      document.getElementById("song").innerHTML = "Couldn't load the song...";
+      document.getElementById("song").innerHTML = `<span id="songerr">Couldn't load the song...</span>`;
     });
   </script>
 </footer>
