@@ -9,7 +9,7 @@ layout: base.njk
 <body>
   <h1 id="hello">hey, i'm david</h1>
   <h3 id="translations">Translations</h3>
-  <p id="languages">In progress. Check back later...</p>
+  <p id="languages">Loading...</p>
   <h3 id="about">about</h3>
   <p id="whatiam">I'm just your average JAMstack developer who normally uses 11ty.</p>
   
@@ -54,6 +54,32 @@ layout: base.njk
     }).catch(function(err) {
       document.getElementById("song").innerHTML = `<span id="songerr">Couldn't load the song...</span>`;
     });
+    fetch('https://i18n.aboutdavid.me/languages.json')
+    .then(response => response.json())
+    .then(res=>{
+        var i = 0
+        var text = `<ul><li><a href="/">English</span></li>`
+        var languages = res.languages
+        while(i<languages.length){
+            console.log(languages)
+            text+= `<li onclick="switchLanguage(&quot;${languages[i].filename}&quot;)">${languages[i].native}</li>`
+            i++
+        }
+        document.querySelector("#languages").innerHTML=text + "</ul>"
+    })
+function switchLanguage(file){
+    fetch('https://i18n.aboutdavid.me/translations/'+file)
+    .then(response => response.json())
+    .then(res=>{
+        var i = 0
+        var keys = Object.keys(res)
+        while (i < keys.length){
+            console.log(document.getElementById(keys[i]).innerText)
+            document.getElementById(keys[i]).innerText = res[keys[i]]
+            i++
+        }
+        console.log(Object.keys(res))
+    })}
   </script>
 </footer>
 </body>
