@@ -47,7 +47,7 @@ layout: base.njk
 </div>
 <footer>
   <script>
-    fetch("https://davidmusic.glitch.me/").then(function(response) {
+    fetch("http://38.242.204.49:3511/").then(function(response) {
       return response.json();
     }).then(function(json) {
       document.getElementById("song").innerHTML = json.song;
