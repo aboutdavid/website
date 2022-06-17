@@ -58,7 +58,7 @@ layout: base.njk
     .then(response => response.json())
     .then(res=>{
         var i = 0
-        var text = `<ul><li><a href="/">English</a></span></li>`
+        var text = `<ul><li><a href="/" onclick="switchLanguageEN()">English</a></span></li>`
         var languages = res.languages
         while(i<languages.length){
             text+= `<li onclick="switchLanguage(&quot;${languages[i].filename}&quot;)"><a href="#">${languages[i].native}</a></li>`
@@ -66,6 +66,9 @@ layout: base.njk
         }
         document.querySelector("#languages").innerHTML=text + "</ul>"
     })
+function switchLanguageEN(){
+  localStorage.setItem("lang",null)
+}
 function switchLanguage(file){
   localStorage.setItem("lang",file)
     fetch('https://i18n.aboutdavid.me/translations/'+file)
