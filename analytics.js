@@ -12,3 +12,16 @@ function clickedOnProject(){
         value: 1
     })
 }
+function clickedOnTranslationsGithub(){
+    instance.action(domainID, {
+        key: 'GitHub Translation Page Viewed',
+        value: 1
+    })
+}
+function clickedOnTranslations(file){
+    var lang = file.replace(".json","")
+    instance.action(domainID, {
+        key: `User set language to ${lang}`,
+        value: 1
+    })
+}

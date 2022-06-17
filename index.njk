@@ -8,7 +8,7 @@ layout: base.njk
 </head>
 <body>
   <h1 id="hello">hey, i'm david</h1>
-  <a id="translations" href="https://github.com/aboutdavid/i18n/"><h3>Translations</h3></a>
+  <a id="translations" href="https://github.com/aboutdavid/i18n/" onclick="clickedOnTranslationsGithub()"><h3>Translations</h3></a>
   <p id="languages">Loading...</p>
   <h3 id="about">about</h3>
   <p id="whatiam">I'm just your average JAMstack developer who normally uses 11ty.</p>
@@ -61,13 +61,13 @@ layout: base.njk
         var text = `<ul><li><a href="/">English</a></span></li>`
         var languages = res.languages
         while(i<languages.length){
-            console.log(languages)
             text+= `<li onclick="switchLanguage(&quot;${languages[i].filename}&quot;)"><a href="#">${languages[i].native}</a></li>`
             i++
         }
         document.querySelector("#languages").innerHTML=text + "</ul>"
     })
 function switchLanguage(file){
+  localStorage.setItem("lang",file)
     fetch('https://i18n.aboutdavid.me/translations/'+file)
     .then(response => response.json())
     .then(res=>{
@@ -78,8 +78,11 @@ function switchLanguage(file){
             document.getElementById(keys[i]).innerText = res[keys[i]]
             i++
         }
-        console.log(Object.keys(res))
+        clickedOnTranslations(file)
     })}
+    if (localStorage.getItem("lang")){
+      switchLanguage(localStorage.getItem("lang"))
+    }
   </script>
 </footer>
 </body>
