@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.png");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("analytics.js");
+  eleventyConfig.addPassthroughCopy("utils.js");
   eleventyConfig.addPassthroughCopy("cms/config.yml");
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {

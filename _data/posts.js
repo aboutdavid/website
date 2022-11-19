@@ -63,9 +63,8 @@ module.exports = function () {
       var title = pagedata.properties.Title.title[0].plain_text;
       obj.push({
         title: title,
-        date: moment(new Date(pagedata.properties.Date.date.start)).format(
-          "MMMM do[,] YYYY"
-        ),
+        dateObj: pagedata.properties.Date.date.start,
+        date: new Date(pagedata.properties.Date.date.start).toLocaleString('en-US', { timeZone: 'America/New_York', timeStyle: "short", dateStyle: "long" }).split(" at")[0] ,
         html: html.split("\n").slice(5).join("\n"),
         readTime: readingTime(mddata).text,
         slug: slugify(title),

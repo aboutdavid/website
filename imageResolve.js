@@ -48,7 +48,7 @@ async function main() {
           /*maintainEntryPath*/ false,
           /*overwrite*/ true
         );
-        console.log(__dirname + "/_site/" + newName);
+       // console.log(__dirname + "/_site/" + newName);
       }
     });
     i++;
