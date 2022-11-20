@@ -65,10 +65,10 @@ module.exports = function () {
         title: title,
         dateObj: pagedata.properties.Date.date.start,
         date: new Date(pagedata.properties.Date.date.start).toLocaleString('en-US', { timeZone: 'America/New_York', timeStyle: "short", dateStyle: "long" }).split(" at")[0] ,
-        html: html.split("\n").slice(5).join("\n"),
+        html: html.split("\n").slice(4).join("\n"),
         readTime: readingTime(mddata).text,
         slug: slugify(title),
-        description: desc(html).replace(/(<([^>]+)>)/gi, ""),
+        description: desc(html.split("\n").slice(4).join("\n")).replace(/(<([^>]+)>)/gi, ""),
       });
       i++;
     }
