@@ -23,12 +23,19 @@ permalink: post/{{ post.slug }}/
 </a> 
 </h3>
 <h1 class="title">{{ post.title }}</h1>
-<small>Written on {{ post.date }} &bull; {{ post.readTime }} </small>
+<small>Written on {{ post.date }} &bull; 🍿 {{ post.readTime }} </small>
 
 {{ post.html | safe }}
 
 <p>
   You can see the main site <a href="/">here</a>.
 </p>
-<script defer src="https://commento.aboutdavid.me/js/commento.js"></script>
-<div id="commento"><noscript>Huh, no JavaScript. Well comments won't be able to function without it</noscript></div>
+<script src="https://utteranc.es/client.js"
+        repo="aboutdavid/blog-comments"
+        issue-term="pathname"
+        label="aboutdavid/blog-comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+<noscript>If you would like to see comments, you must enable JavaScript :)</noscript>

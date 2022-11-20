@@ -63,6 +63,7 @@ a:hover {
 .title {
   font-size: var(--title-size);
   font-weight: bold;
+  margin: 0px 0px 1rem 0px;
 }
 .face {
   vertical-align: middle;
