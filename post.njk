@@ -28,6 +28,9 @@ permalink: post/{{ post.slug }}/
 <time class="dt-published" datetime="{{ post.date }}" style="display:none;">{{ post.date }}</time>
 <p class="p-summary" style="display:none;">{{ post.description }}</p>
 <small>Written on {{ post.date }} &bull; 🍿 {{ post.readTime }} </small>
+<img class="u-photo" src="https://f004.backblazeb2.com/file/aboutdavid/IMG_9339+(2).webp" style="display:none;" />
+<a class="u-url" href="https://aboutdavid.me/post/{{ post.slug }}/" style="display:none;"></a>
+
 
 <div class="e-content">
 {{ post.html | safe }}
