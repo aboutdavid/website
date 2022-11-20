@@ -39,7 +39,7 @@ module.exports = function () {
     const response = await notion.databases.query({
       database_id: databaseId,
       filter: {
-        or: [
+        and: [
           {
             property: "Published",
             checkbox: {
