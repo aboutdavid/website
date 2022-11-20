@@ -22,11 +22,17 @@ permalink: post/{{ post.slug }}/
   aboutdavid
 </a> 
 </h3>
-<h1 class="title">{{ post.title }}</h1>
+<article class="h-entry">
+<h1 class="title p-name">{{ post.title }}</h1>
+<a class="p-author h-card" href="https://aboutdavid.me" style="display:none;">David</a>
+<time class="dt-published" datetime="{{ post.date }}" style="display:none;">{{ post.date }}</time>
+<p class="p-summary" style="display:none;">{{ post.description }}</p>
 <small>Written on {{ post.date }} &bull; 🍿 {{ post.readTime }} </small>
 
+<div class="e-content">
 {{ post.html | safe }}
-
+</div>
+</article>
 <p>
   You can see the main site <a href="/">here</a>.
 </p>
