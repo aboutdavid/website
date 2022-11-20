@@ -76,6 +76,7 @@ footer {
 }
 .modeswitch {
   float: right;
+  cursor: pointer;
 }
 
 [data-theme="dark"] {
