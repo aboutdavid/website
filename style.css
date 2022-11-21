@@ -96,3 +96,12 @@ footer {
   --dark-text-color: #4c4f69;
   --dark-anchor-color: #dc8a78;
 }
+.body404 {
+    padding-right: 3.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+    padding: 2.625rem 1.3125rem;
+    padding-top: 0;
+    padding-top: 15%;
+}

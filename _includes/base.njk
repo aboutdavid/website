@@ -46,6 +46,7 @@
     <meta property="twitter:image" content="" />
     <title>aboutdavid</title>
     <link inline rel="stylesheet" href="/style.css" />
+    <link href="feed.xml" type="application/atom+xml" rel="alternate" title="aboutdavid's blog" />
 <script async src="https://ackee.aboutdavid.me/tracker.js" data-ackee-server="https://ackee.aboutdavid.me" data-ackee-domain-id="ed2d6c15-7aca-42fc-8f8f-6c0a49fed42e"></script>  </head>
   <body>
     {{ content | safe }}
@@ -53,6 +54,7 @@
   <footer>
     <script inline src="/utils.js"></script>
   &copy; 2019-2022 aboutdavid.me. All Rights Reserved.<br>
-  Running build <abbr title="{{ git.full }}">{{ git.short }}</abbr> on {{ git.date }}.
+  Running build <abbr title="{{ git.full }}">{{ git.short }}</abbr> on {{ git.date }}.<br>
+  You can subscribe to my <a href="/feed.xml">RSS/Atom feed</a> or my <a href="/feed.json">JSON feed</a>
 </footer>
 </html>
