@@ -21,7 +21,7 @@ layout: base.njk
   <h2>projects</h2>
 <ul>
    {% for project in projects %}
-    <li><a href="{{ project.url }}" target="_blank">{{ project.name }}</a> &mdash; {{ project.description }} &bull; {{ project.stargazers }} stargazers &bull; {% if project.primaryLanguage %}{{ project.primaryLanguage.name }}{% else %}Unknown{% endif%}{% endfor %}</li><br>
+    <li><a href="{{ project.url }}" target="_blank">{{ project.name }}</a> &mdash; {{ project.description }} &bull; {{ project.stargazers }} stargazers &bull; {% if project.primaryLanguage %}{{ project.primaryLanguage.name }}{% else %}Unknown{% endif%}</li><br>
    {% endfor %}
 </ul>
 <h2>blog</h2>
