@@ -16,12 +16,12 @@ layout: base.njk
     <li>libera.chat: aboutDavid</li>
     <li>Keybase: aboutdavid</li>
     <li>Email: <span id="email">aboutdavid [at] protonmail [dot] com</span></li>
-    <li>PGP: <a href="https://git.io/JqThW">91E6 BCC6 5D21 E893</a></li>
+    <li>PGP: <a href="https://git.io/JqThW" target="_blank">91E6 BCC6 5D21 E893</a></li>
   </ul>
   <h2>latest commit</h2>
-  <p><a href="https://github.com/{{ commit.repo }}">{{ commit.repo }}</a> @ {{ commit.time }} (EST):</p>
+  <p><a href="https://github.com/{{ commit.repo }}" target="_blank">{{ commit.repo }}</a> @ {{ commit.time }} (EST):</p>
 <p>{{ commit.message }}</p>
-<a href="{{ commit.url }}">view this commit</a>
+<a href="{{ commit.url }}" target="_blank">view this commit</a>
   <h2>projects</h2>
 <ul>
    {% for project in projects %}
