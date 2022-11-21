@@ -23,7 +23,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     updateBtn(event.matches ? "dark" : "light")
 });
 document.addEventListener("DOMContentLoaded", function() {
-    updateBtn()
+    if (location.pathname == "/") updateBtn()
     if (!localStorage.getItem("theme")){ 
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) localStorage.setItem("theme", "dark")
         else localStorage.setItem("theme", "light")
