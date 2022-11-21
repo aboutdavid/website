@@ -8,7 +8,7 @@ permalink: feed.xml
 	<subtitle>the blog of aboutdavid</subtitle>
 	<link href="https://aboutdavid.me" rel="self"/>
 	<link href="https://aboutdavid.me"/>
-	<updated>{{ posts[0].date }}</updated>
+	<updated>{{ posts[0].date | toISODate }}</updated>
 	<id>aboutdavid</id>
 	<author>
 		<name>aboutdavid</name>
@@ -18,7 +18,7 @@ permalink: feed.xml
 	<entry>
 		<title>{{ post.title }}</title>
 		<link href="https://aboutdavid.me/post/{{ post.slug }}"/>
-		<updated>{{ post.date }}</updated>
+		<updated>{{ post.date | toISODate }}</updated>
 		<id>{{ post.slug }}</id>
 		<content type="html">{{ post.html | replace("\n", "") | replace("</html>", "") | replace("</body>", "") | safe }}</content>
 	</entry>

@@ -20,6 +20,13 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+  eleventyConfig.addFilter("toISODate", function(value) { 
+    return new Date(value).toISOString()
+   });
+
+  eleventyConfig.addShortcode("ISOdate", function () {
+    return new Date().toISOString();
+  });
   eleventyConfig.addTransform("cssmin", function (content, outputPath) {
     if (outputPath.endsWith(".css")) {
       return new CleanCSS({}).minify(content);
