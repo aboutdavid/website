@@ -1,3 +1,5 @@
+const email = document.querySelector("#email").innerText.replace(" [at] ", "@").replace(" [dot] ", ".")
+document.querySelector("#email").innerHTML = `<a href="mailto:${email}">${email}</a>`
 function updateBtn(){
     if (localStorage.getItem("theme") == "dark") document.querySelector("#modeswitch").innerHTML = "☀️"
     if (localStorage.getItem("theme") == "light") document.querySelector("#modeswitch").innerHTML = "🌕"
