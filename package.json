@@ -19,6 +19,7 @@
     "clean-css": "^5.1.1",
     "dotenv": "^10.0.0",
     "download": "^8.0.0",
+    "eleventy-plugin-lazyimages": "^2.1.2",
     "extract-zip": "^2.0.1",
     "html-minifier": "^4.0.0",
     "markdown-it": "^12.0.4",

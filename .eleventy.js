@@ -1,7 +1,9 @@
 const htmlmin = require("html-minifier");
 const CleanCSS = require("clean-css");
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(lazyImagesPlugin);
   eleventyConfig.addPassthroughCopy("favicon.png");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("analytics.js");
