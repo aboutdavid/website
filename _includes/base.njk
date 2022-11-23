@@ -54,7 +54,8 @@
   <footer>
     <script inline src="/utils.js"></script>
   &copy; 2019-2022 aboutdavid.me. All Rights Reserved.<br>
-  Running build <abbr title="{{ git.full }}">{{ git.short }}</abbr> on {{ git.date }}. Branch {% if env.BRANCH %}{{ env.BRANCH }}{% else %}unknown{% endif%}<br>
-  You can subscribe to my <a href="/feed.xml">RSS/Atom feed</a> or my <a href="/feed.json">JSON feed</a>
+  Running build <abbr title="{{ git.full }}"><a href="https://github.com/aboutdavid/website/commit/{{ git.full }}" target="_blank" style="text-decoration:none;">{{ git.short }}</a></abbr> on {{ git.date }}. Branch: {% if env.BRANCH %}{{ env.BRANCH }}{% else %}unknown{% endif%}<br>
+  You can subscribe to my <a href="/feed.xml">RSS/Atom feed</a> or my <a href="/feed.json">JSON feed</a><br>
+  This website is <a href="https://github.com/aboutdavid/website" target="_blank">open-source</a>.
 </footer>
 </html>

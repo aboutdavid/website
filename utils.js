@@ -2,7 +2,7 @@ const email = document.querySelector("#email").innerText.replace(" [at] ", "@").
 document.querySelector("#email").innerText = email
 function updateBtn(){
     if (localStorage.getItem("theme") == "dark") document.querySelector("#modeswitch").innerHTML = "☀️"
-    if (localStorage.getItem("theme") == "light") document.querySelector("#modeswitch").innerHTML = "🌕"
+    if (localStorage.getItem("theme") == "light") document.querySelector("#modeswitch").innerHTML = "🌙"
 }
 
 function onSwitch(){
