@@ -1,12 +1,9 @@
 require("dotenv").config();
 const { Client } = require("@notionhq/client");
 const NotionExporter = require("notion-exporter").default;
-const moment = require("moment");
 const slugify = require("slugify");
 const readingTime = require("reading-time");
-const AdmZip = require("adm-zip");
-const download = require("download");
-const fs = require("fs");
+
 
 const md = require("markdown-it")({
   html: true,

@@ -1,7 +1,7 @@
 var request = require("sync-request");
 var res = request("GET", `https://gh-latest-repos-beta.vercel.app/`, {
   headers: {
-    "user-agent": "David's Website",
+    "user-agent": "Mozilla/5.0 (compatible; aboutdavid.me/1.0)",
   },
 });
 
