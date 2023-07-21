@@ -7,16 +7,13 @@ layout: base.njk
   <h2>about</h2>
   <p class="p-note">Hello, I’m David. I’m a high-schooler who likes tennis, food, and coding. A lot of my code is open-source which is usually located on <a href="https://github.com" target="_blank">GitHub</a>.</p>
   <h2>now</h2>
-  <p>Currently suffering at school, but in my spare time, working on <a href="https://notelier.cloud" target="_blank">Notelier</a> with Asad. When home, I do daily tennis pratice and do tennis drills so I can try out in the spring!</p>
+  <p>I'm not working on anything in particular.</p>
  <h2>contact</h2>
   <ul>
     <li>GitHub: aboutDavid</li>
-    <li>Twitter: @UpscaleDavid</li>
-    <li>Discord: aboutdavid#5745</li>
-    <li>libera.chat: aboutDavid</li>
-    <li>Keybase: aboutdavid</li>
+    <li>Mastodon: @david@social.dino.icu </li>
+    <li>libera.chat: aboutdavid</li>
     <li>Email: <span id="email">aboutdavid [at] protonmail [dot] com</span></li>
-    <li>PGP: <a href="https://git.io/JqThW" target="_blank">91E6 BCC6 5D21 E893</a></li>
   </ul>
   <h2>latest commit</h2>
   <p><a href="https://github.com/{{ commit.repo }}" target="_blank">{{ commit.repo }}</a> @ {{ commit.time }} (EST):</p>
@@ -28,13 +25,5 @@ layout: base.njk
     <li><a href="{{ project.url }}" target="_blank">{{ project.name }}</a> &mdash; {{ project.description }} &bull; {{ project.stargazers }} stargazers &bull; {% if project.primaryLanguage %}{{ project.primaryLanguage.name }}{% else %}Unknown Language{% endif%}</li><br>
    {% endfor %}
 </ul>
-<h2>blog</h2>
-<div>
-  <ul>
-  {% for post in posts %}
-  <li><a href="/post/{{ post.slug }}">{{ post.title }}</a> &mdash; {{
-   post.date }} &bull; {{ post.readTime }} </li>
-<br>
- {% endfor %}
-</ul>
+
 </div>
