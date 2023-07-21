@@ -35,5 +35,5 @@ module.exports = function (eleventyConfig) {
     }
     return content;
   });
-  require("./imageResolve.js");
+  // require("./imageResolve.js");
 };
