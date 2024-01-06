@@ -55,7 +55,7 @@
   </body>
   <footer>
     <script inline src="/utils.js"></script>
-  &copy; 2019-2023 aboutdavid.me. All Rights Reserved.<br>
+  &copy; 2019-<span id="year">2024</span> aboutdavid.me. All Rights Reserved.<br>
   Running build <abbr title="{{ git.full }}"><a href="https://github.com/aboutdavid/website/commit/{{ git.full }}" target="_blank" style="text-decoration:none;">{{ git.short }}</a></abbr> from {{ git.date }}. Branch: {% if env.BRANCH %}{{ env.BRANCH }}{% else %}unknown{% endif%}<br>
   You can subscribe to my <a href="/feed.xml">RSS/Atom feed</a> or my <a href="/feed.json">JSON feed</a><br>
   This website is <a href="https://github.com/aboutdavid/website" target="_blank">open-source</a>.
@@ -63,6 +63,7 @@
 	<img src="https://www.abuseipdb.com/contributor/49168.svg" alt="AbuseIPDB Contributor Badge" style="width: 0px; display: none;">
 </a>
 <script async defer src="https://sa.aboutdavid.me/latest.js"></script>
+<script>document.querySelector("#year").innerText=new Date().getFullYear()</script>
 <noscript><img src="https://sa.aboutdavid.me/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript> 
 </footer>
 </html>
